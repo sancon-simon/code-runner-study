@@ -1,0 +1,43 @@
+<ScreenEditor>:
+    name: "editor"
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: self.theme_cls.primaryContainerColor
+
+        MDTopAppBar:
+            id: "top_bar_upload"
+            type: "small"
+            md_bg_color: [0,0,1,1]
+
+            MDTopAppBarLeadingButtonContainer:
+
+                MDActionTopAppBarButton:
+                    icon: "arrow-left"
+                    on_release: app.root.current = "main"
+
+            MDTopAppBarTitle:
+                text: "Run Code"
+                pos_hint: {"center_x": .5}
+
+            MDTopAppBarTrailingButtonContainer:
+
+                MDActionTopAppBarButton:
+                    icon: "check"
+                    on_release: app.run_code()
+
+        MDBoxLayout:
+            orientation: "vertical"
+
+            CodeInput:
+                id: code_input
+                language: 'python'
+                style_name: 'monokai'
+                text: "# Write your Python code here\n"
+
+            TextInput:
+                id: console_output
+                size_hint_y: None
+                height: dp(200)
+                readonly: True
+                hint_text: "Output will be displayed here"

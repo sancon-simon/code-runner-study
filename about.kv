@@ -1,0 +1,95 @@
+<ScreenAbout>
+	name: "about"
+
+    MDBoxLayout:
+		orientation: "vertical"
+		md_bg_color: self.theme_cls.primaryContainerColor
+
+		MDTopAppBar:
+			id: "top_bar_upload"
+			type: "small"
+			size_hint_x: 1 
+			md_bg_color: [0,0,1,1]
+
+			MDTopAppBarLeadingButtonContainer:
+
+				MDActionTopAppBarButton:
+					icon: "arrow-left"
+					on_release: app.root.current = "main"
+
+
+			MDTopAppBarTitle:
+				text: "About Us"
+				pos_hint: {"center_x": .5}
+
+
+		MDBoxLayout:
+			orientation:"vertical"
+			MDScreen:
+				Image:
+		            source: "kivyimages\image_python.png"
+		            size_hint_y: .35
+		            pos_hint: {"top": 1}
+		            radius: "36dp", "36dp", 0, 0
+
+		        MDLabel:
+		        	text: "APP NAME"
+		        	halign: "center"
+		        	pos_hint: {"center_x": .5, "center_y": .60}
+		        	font_style: "Display"
+		        	role: "small"
+		        	adaptive_height: True
+
+		        MDScreen:
+
+		        	MDLabel:
+			        	text: "Jude B. Gajitos"
+			        	halign: "center"
+			        	pos_hint: {"center_x": .5, "center_y": .50}
+			        	font_style: "Title"
+			        	role: "medium"
+
+			        MDLabel:
+			        	text: "Lucky Owell U. Millare"
+			        	halign: "center"
+			        	pos_hint: {"center_x": .5, "center_y": .46}
+			        	font_style: "Title"
+			        	role: "medium"
+
+			        MDLabel:
+			        	text: "Simon B. Sancon"
+			        	halign: "center"
+			        	pos_hint: {"center_x": .5, "center_y": .42}
+			        	font_style: "Title"
+			        	role: "medium"
+
+				MDScreen:
+
+					MDLabel:
+			        	text: "Contact Us"
+			        	halign: "center"
+			        	pos_hint: {"center_x": .5, "center_y": .24}
+			        	font_style: "Title"
+			        	role: "medium"
+
+		        	MDLabel:
+			        	text: "gajitosjude@gmail.com"
+			        	halign: "center"
+			        	pos_hint: {"center_x": .5, "center_y": .20}
+			        	font_style: "Label"
+			        	role: "small"
+
+			        MDLabel:
+			        	text: "luckymillare27@gmail.com"
+			        	halign: "center"
+			        	pos_hint: {"center_x": .5, "center_y": .16}
+			        	font_style: "Label"
+			        	role: "small"
+
+			        MDLabel:
+			        	text: "sanconsimons@gmail.com"
+			        	halign: "center"
+			        	pos_hint: {"center_x": .5, "center_y": .12}
+			        	font_style: "Label"
+			        	role: "small"
+
